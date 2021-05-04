@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R01-Cn-ogS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="sGY-0Z-TKh">
+            <objects>
+                <viewController id="R01-Cn-ogS" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZa-P0-4L8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vN2-I9-nEd">
+                                <rect key="frame" x="125" y="787.5" width="164" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawButton:" destination="R01-Cn-ogS" eventType="touchUpInside" id="pmd-my-Dbu"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zmA-8k-710">
+                                <rect key="frame" x="50" y="119" width="314" height="493.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="(value suit label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTy-Dl-cwv">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZlB-dg-gTn">
+                                        <rect key="frame" x="0.0" y="43.5" width="314" height="450"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="450" id="DBI-5P-qng"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAx-36-yHn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zmA-8k-710" firstAttribute="leading" secondItem="dAx-36-yHn" secondAttribute="leading" constant="50" id="0DO-DD-vEp"/>
+                            <constraint firstItem="vN2-I9-nEd" firstAttribute="top" secondItem="zmA-8k-710" secondAttribute="bottom" constant="175" id="5Kv-lK-nl1"/>
+                            <constraint firstItem="dAx-36-yHn" firstAttribute="trailing" secondItem="zmA-8k-710" secondAttribute="trailing" constant="50" id="FyH-C0-9IK"/>
+                            <constraint firstItem="dAx-36-yHn" firstAttribute="trailing" secondItem="vN2-I9-nEd" secondAttribute="trailing" constant="125" id="J1l-PL-Fu8"/>
+                            <constraint firstItem="dAx-36-yHn" firstAttribute="bottom" secondItem="vN2-I9-nEd" secondAttribute="bottom" constant="24" id="KeA-2w-K1a"/>
+                            <constraint firstItem="vN2-I9-nEd" firstAttribute="leading" secondItem="dAx-36-yHn" secondAttribute="leading" constant="125" id="KlJ-HE-L6E"/>
+                            <constraint firstItem="zmA-8k-710" firstAttribute="top" secondItem="dAx-36-yHn" secondAttribute="top" constant="75" id="l8C-we-cjA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImage" destination="ZlB-dg-gTn" id="bMD-xA-iNb"/>
+                        <outlet property="cardLabel" destination="VTy-Dl-cwv" id="cRo-be-K7X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKM-Hs-mUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365.21739130434787" y="-254.46428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

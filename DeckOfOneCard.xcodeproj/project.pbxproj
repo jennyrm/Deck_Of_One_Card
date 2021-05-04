@@ -13,6 +13,10 @@
 		7E62A24123AA9BB700D23AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E62A24023AA9BB700D23AFA /* Assets.xcassets */; };
 		7E62A24423AA9BB700D23AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E62A24223AA9BB700D23AFA /* LaunchScreen.storyboard */; };
 		7E62A25123AA9D3400D23AFA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62A25023AA9D3400D23AFA /* UIViewControllerExtension.swift */; };
+		9B83E69F2641D8F1003F3F47 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83E69E2641D8F1003F3F47 /* Card.swift */; };
+		9B83E6A32641D932003F3F47 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83E6A22641D932003F3F47 /* CardController.swift */; };
+		9B83E6A62641D94C003F3F47 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83E6A52641D94C003F3F47 /* CardViewController.swift */; };
+		9B83E6AB2641D999003F3F47 /* CardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83E6AA2641D999003F3F47 /* CardError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		7E62A24523AA9BB700D23AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E62A25023AA9D3400D23AFA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		7EC27C5023B9EADC002859DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9B83E69E2641D8F1003F3F47 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		9B83E6A22641D932003F3F47 /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
+		9B83E6A52641D94C003F3F47 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardViewController.swift; path = "DeckOfOneCard/Controllers/View Controllers/CardViewController.swift"; sourceTree = SOURCE_ROOT; };
+		9B83E6AA2641D999003F3F47 /* CardError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,10 @@
 		7E62A23623AA9BB700D23AFA /* DeckOfOneCard */ = {
 			isa = PBXGroup;
 			children = (
-				7E62A23D23AA9BB700D23AFA /* Main.storyboard */,
-				7E62A25523AA9D5300D23AFA /* View Controllers */,
-				7E62A25423AA9D4800D23AFA /* Model Controllers */,
 				7E62A25223AA9D3E00D23AFA /* Models */,
-				7E62A25323AA9D4200D23AFA /* Helpers */,
+				9B83E69A2641D81D003F3F47 /* Controllers */,
+				9B83E69B2641D84E003F3F47 /* Views */,
+				7E62A25323AA9D4200D23AFA /* Helpers and Extension */,
 				7E62A24B23AA9BBE00D23AFA /* Resources */,
 			);
 			path = DeckOfOneCard;
@@ -74,7 +81,6 @@
 				7E62A23723AA9BB700D23AFA /* AppDelegate.swift */,
 				7E62A23923AA9BB700D23AFA /* SceneDelegate.swift */,
 				7E62A24023AA9BB700D23AFA /* Assets.xcassets */,
-				7E62A24223AA9BB700D23AFA /* LaunchScreen.storyboard */,
 				7E62A24523AA9BB700D23AFA /* Info.plist */,
 			);
 			path = Resources;
@@ -83,28 +89,67 @@
 		7E62A25223AA9D3E00D23AFA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9B83E69E2641D8F1003F3F47 /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		7E62A25323AA9D4200D23AFA /* Helpers */ = {
+		7E62A25323AA9D4200D23AFA /* Helpers and Extension */ = {
 			isa = PBXGroup;
 			children = (
 				7E62A25023AA9D3400D23AFA /* UIViewControllerExtension.swift */,
+				9B83E6AA2641D999003F3F47 /* CardError.swift */,
 			);
-			path = Helpers;
+			path = "Helpers and Extension";
 			sourceTree = "<group>";
 		};
 		7E62A25423AA9D4800D23AFA /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9B83E6A22641D932003F3F47 /* CardController.swift */,
 			);
-			path = "Model Controllers";
+			name = "Model Controllers";
+			path = "../Models/Model Controllers";
 			sourceTree = "<group>";
 		};
-		7E62A25523AA9D5300D23AFA /* View Controllers */ = {
+		9B83E69A2641D81D003F3F47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7E62A25423AA9D4800D23AFA /* Model Controllers */,
+				9B83E6A82641D961003F3F47 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9B83E69B2641D84E003F3F47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B83E69D2641D859003F3F47 /* Storyboards */,
+				9B83E69C2641D858003F3F47 /* Custom Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B83E69C2641D858003F3F47 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		9B83E69D2641D859003F3F47 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7E62A23D23AA9BB700D23AFA /* Main.storyboard */,
+				7E62A24223AA9BB700D23AFA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9B83E6A82641D961003F3F47 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B83E6A52641D94C003F3F47 /* CardViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -180,9 +225,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B83E6A32641D932003F3F47 /* CardController.swift in Sources */,
 				7E62A25123AA9D3400D23AFA /* UIViewControllerExtension.swift in Sources */,
+				9B83E6A62641D94C003F3F47 /* CardViewController.swift in Sources */,
 				7E62A23823AA9BB700D23AFA /* AppDelegate.swift in Sources */,
 				7E62A23A23AA9BB700D23AFA /* SceneDelegate.swift in Sources */,
+				9B83E6AB2641D999003F3F47 /* CardError.swift in Sources */,
+				9B83E69F2641D8F1003F3F47 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
